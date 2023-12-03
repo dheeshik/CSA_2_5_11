@@ -11,10 +11,22 @@ public class Board {
   }
 
   public static void displayBoard() {
-
+    System.out.print(pieces + " --- ");
     for (int i = 0; i < pieces; i++) {
-      System.out.print(" | ");
+      System.out.print("| ");
     }
-    System.out.println("");
+    System.out.println();
   }
+
+  public static boolean removePieces(int n) {
+    if ((n <= (pieces / 2)) && n > 0) {
+      pieces -= n;
+      return true;
+
+    } else {
+      System.out.println("Invalid Input");
+      return false;
+    }
+  }
+
 }
