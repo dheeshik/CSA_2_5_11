@@ -13,7 +13,7 @@ public class Board {
   public static void displayBoard() {
     System.out.print(pieces + " --- ");
     for (int i = 0; i < pieces; i++) {
-      System.out.print("| ");
+      System.out.print(Game.ANSI_YELLOW + "| " + Game.ANSI_RESET);
     }
     System.out.println();
   }
@@ -25,7 +25,7 @@ public class Board {
       return true;
 
     } else {
-      System.out.println("Invalid Input");
+      System.out.println(Game.ANSI_RED + "Invalid Input" + Game.ANSI_RESET);
       return false;
     }
   }

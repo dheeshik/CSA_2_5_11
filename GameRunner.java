@@ -16,11 +16,12 @@ public class GameRunner {
     Scanner sc = new Scanner(System.in); // global scanner instance for user input
 
 
-    System.out.println("Do you want to play multiplayer or against a computer?: m - multiplayer / c - computer");
-    String input = sc.nextLine();
+    System.out.println(Game.ANSI_PURPLE);
+    System.out.println("Do you want to play multiplayer or against a computer?:\nm - multiplayer / c - computer" + Game.ANSI_RESET);
+    String mode = sc.nextLine();
 
     // mode select
-    if (input.equals("m")){
+    if (mode.equals("m")){
       Game nim = new Game(sc);
       nim.firstPlayer = ((int)(Math.random()+0.5));
       System.out.print("Enter Player 1 Name: ");
@@ -29,7 +30,7 @@ public class GameRunner {
       nim.names.add(sc.nextLine());
       nim.twoPlayerGame();
     }
-    else if(input.equals("c")){
+    else if(mode.equals("c")){
       Game nim = new Game(sc);
       System.out.print("Enter Player Name: ");
       nim.names.add(sc.nextLine());

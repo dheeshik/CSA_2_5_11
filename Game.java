@@ -7,10 +7,12 @@ public class Game {
   static final String ANSI_RESET = "\u001B[0m";
   static final String ANSI_RED = "\u001B[31m";
   static final String ANSI_GREEN = "\u001B[32m";
+  static final String ANSI_YELLOW = "\u001B[33m";
+  static final String ANSI_PURPLE = "\u001B[35m\t";
 
 
   public ArrayList<String> names = new ArrayList<>();
-  Scanner sc;
+  private Scanner sc;
 
   public int firstPlayer; // randomly selected first player
   int currentPlayer;
