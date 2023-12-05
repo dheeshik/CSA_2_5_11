@@ -18,7 +18,8 @@ public class Board {
     System.out.println();
   }
 
-  public static boolean removePieces(int n) {
+  public static boolean removePieces(String s) {
+    int n = Integer.parseInt(s);
     if ((n <= (pieces / 2)) && n > 0) {
       pieces -= n;
       return true;
